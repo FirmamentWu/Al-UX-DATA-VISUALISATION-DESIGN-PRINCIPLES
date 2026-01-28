@@ -1,0 +1,86 @@
+{
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 0.0,
+      "significant": "True",
+      "premium_ratio": 2.3333333333333335,
+      "median_entire": 175.0,
+      "median_private": 75.0
+    },
+    "capacity_premium": {
+      "correlation": 0.5614273262887879,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": -28.22939084615519,
+      "interaction_p_value": 6.78816047011588e-58,
+      "significant": "True"
+    }
+  },
+  "scenario2": {
+    "region_comparison": {
+      "p_value": 0.0,
+      "significant": "True",
+      "medians": {
+        "Bronx": 85.0,
+        "Brooklyn": 109.0,
+        "Manhattan": 170.0,
+        "Queens": 85.0,
+        "Staten Island": 100.0
+      }
+    }
+  },
+  "scenario3": {
+    "scale_price": {
+      "p_value": 4.6574812832296254e-73,
+      "significant": "True",
+      "medians": {
+        "1": 127.0,
+        "2-3": 109.0,
+        "4-5": 105.0,
+        ">5": 150.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 0.0,
+      "significant": "True",
+      "medians": {
+        "1": 0.0,
+        "2-3": 110.0,
+        "4-5": 193.0,
+        ">5": 244.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.06925259599130024,
+      "p_value": 6.05786131163108e-41,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 0.0,
+      "significant": "True",
+      "superhost_median": 154.0,
+      "regular_median": 29.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": 0.1210472833559127,
+      "p_value": 6.530002065830543e-122,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": 0.006226623729390627,
+      "p_value": 0.22883312054974012,
+      "significant": "False"
+    },
+    "ltm_occupancy": {
+      "correlation": 0.43386839930830456,
+      "p_value": 0.0,
+      "significant": "True"
+    }
+  }
+}

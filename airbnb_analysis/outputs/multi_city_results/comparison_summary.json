@@ -1,0 +1,143 @@
+{
+  "consistency": [
+    {
+      "scenario": 1,
+      "scenario_name": "物理空间的溢价逻辑",
+      "test_name": "capacity_premium",
+      "total_cities": 11,
+      "significant_cities": 11,
+      "significance_rate": 1.0,
+      "is_universal": true
+    },
+    {
+      "scenario": 1,
+      "scenario_name": "物理空间的溢价逻辑",
+      "test_name": "privacy_premium",
+      "total_cities": 11,
+      "significant_cities": 11,
+      "significance_rate": 1.0,
+      "is_universal": true
+    },
+    {
+      "scenario": 2,
+      "scenario_name": "黄金地段的绝对统治",
+      "test_name": "region_comparison",
+      "total_cities": 2,
+      "significant_cities": 2,
+      "significance_rate": 1.0,
+      "is_universal": true
+    },
+    {
+      "scenario": 3,
+      "scenario_name": "运营专业化带来的规模溢价",
+      "test_name": "scale_occupancy",
+      "total_cities": 11,
+      "significant_cities": 8,
+      "significance_rate": 0.7272727272727273,
+      "is_universal": false
+    },
+    {
+      "scenario": 3,
+      "scenario_name": "运营专业化带来的规模溢价",
+      "test_name": "scale_price",
+      "total_cities": 11,
+      "significant_cities": 10,
+      "significance_rate": 0.9090909090909091,
+      "is_universal": true
+    },
+    {
+      "scenario": 4,
+      "scenario_name": "信任的货币化",
+      "test_name": "rating_occupancy",
+      "total_cities": 11,
+      "significant_cities": 9,
+      "significance_rate": 0.8181818181818182,
+      "is_universal": true
+    },
+    {
+      "scenario": 4,
+      "scenario_name": "信任的货币化",
+      "test_name": "superhost_comparison",
+      "total_cities": 11,
+      "significant_cities": 10,
+      "significance_rate": 0.9090909090909091,
+      "is_universal": true
+    },
+    {
+      "scenario": 5,
+      "scenario_name": "活跃度即需求的实时信号",
+      "test_name": "historical_price",
+      "total_cities": 11,
+      "significant_cities": 11,
+      "significance_rate": 1.0,
+      "is_universal": true
+    },
+    {
+      "scenario": 5,
+      "scenario_name": "活跃度即需求的实时信号",
+      "test_name": "ltm_occupancy",
+      "total_cities": 11,
+      "significant_cities": 9,
+      "significance_rate": 0.8181818181818182,
+      "is_universal": true
+    },
+    {
+      "scenario": 5,
+      "scenario_name": "活跃度即需求的实时信号",
+      "test_name": "ltm_price",
+      "total_cities": 11,
+      "significant_cities": 11,
+      "significance_rate": 1.0,
+      "is_universal": true
+    }
+  ],
+  "direction": [
+    {
+      "scenario": 1,
+      "scenario_name": "物理空间的溢价逻辑",
+      "test_name": "capacity_premium",
+      "positive": 11,
+      "negative": 0,
+      "total": 11,
+      "direction_consistent": true
+    },
+    {
+      "scenario": 4,
+      "scenario_name": "信任的货币化",
+      "test_name": "rating_occupancy",
+      "positive": 0,
+      "negative": 11,
+      "total": 11,
+      "direction_consistent": true
+    },
+    {
+      "scenario": 5,
+      "scenario_name": "活跃度即需求的实时信号",
+      "test_name": "historical_price",
+      "positive": 2,
+      "negative": 9,
+      "total": 11,
+      "direction_consistent": true
+    },
+    {
+      "scenario": 5,
+      "scenario_name": "活跃度即需求的实时信号",
+      "test_name": "ltm_occupancy",
+      "positive": 1,
+      "negative": 10,
+      "total": 11,
+      "direction_consistent": true
+    },
+    {
+      "scenario": 5,
+      "scenario_name": "活跃度即需求的实时信号",
+      "test_name": "ltm_price",
+      "positive": 2,
+      "negative": 9,
+      "total": 11,
+      "direction_consistent": true
+    }
+  ],
+  "total_tests": 101,
+  "total_cities": 11
+}

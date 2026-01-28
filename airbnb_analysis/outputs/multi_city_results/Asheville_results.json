@@ -1,0 +1,77 @@
+{
+  "city_name": "Asheville",
+  "display_name": "Asheville",
+  "sample_size": 2537,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 1.9955977628495617e-47,
+      "significant": "True",
+      "premium_ratio": 1.9577464788732395,
+      "median_entire": 139.0,
+      "median_private": 71.0
+    },
+    "capacity_premium": {
+      "correlation": 0.5859032415211394,
+      "p_value": 1.1381035354939277e-215,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": 6.371397565295309,
+      "interaction_p_value": 0.6810932101490255,
+      "significant": "False"
+    }
+  },
+  "scenario2": {},
+  "scenario3": {
+    "scale_price": {
+      "p_value": 2.4787583713909143e-28,
+      "significant": "True",
+      "medians": {
+        "1": 119.0,
+        "2-3": 126.0,
+        "4-5": 140.0,
+        ">5": 186.5
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 8.391167256442672e-31,
+      "significant": "True",
+      "medians": {
+        "1": 242.0,
+        "2-3": 288.0,
+        "4-5": 297.0,
+        ">5": 328.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.13776409035213003,
+      "p_value": 3.196067306639012e-12,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 0.8339513510369465,
+      "significant": "False",
+      "superhost_median": 291.0,
+      "regular_median": 267.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": -0.11744922021523635,
+      "p_value": 2.9674720141665683e-09,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": -0.2031452084270731,
+      "p_value": 4.891659831613739e-25,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.008901682881233972,
+      "p_value": 0.6540423580885801,
+      "significant": "False"
+    }
+  }
+}

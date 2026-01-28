@@ -1,0 +1,77 @@
+{
+  "city_name": "Albany",
+  "display_name": "Albany",
+  "sample_size": 437,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 8.222875563826427e-29,
+      "significant": "True",
+      "premium_ratio": 1.793103448275862,
+      "median_entire": 104.0,
+      "median_private": 58.0
+    },
+    "capacity_premium": {
+      "correlation": 0.7050480306001183,
+      "p_value": 1.4278005847441182e-65,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": 16.89811649303561,
+      "interaction_p_value": 0.10442199512545737,
+      "significant": "False"
+    }
+  },
+  "scenario2": {},
+  "scenario3": {
+    "scale_price": {
+      "p_value": 0.007492228855291941,
+      "significant": "True",
+      "medians": {
+        "1": 102.0,
+        "2-3": 85.0,
+        "4-5": 86.0,
+        ">5": 94.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 0.39397156555336754,
+      "significant": "False",
+      "medians": {
+        "1": 268.0,
+        "2-3": 305.0,
+        "4-5": 331.0,
+        ">5": 278.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.08798193087892706,
+      "p_value": 0.0661333025038748,
+      "significant": "False"
+    },
+    "superhost_comparison": {
+      "p_value": 0.001602887517906457,
+      "significant": "True",
+      "superhost_median": 269.0,
+      "regular_median": 321.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": 0.09648210091970542,
+      "p_value": 0.04381644040412818,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": 0.1498193456245953,
+      "p_value": 0.0016855674382025585,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.0643817660583179,
+      "p_value": 0.1791390026485863,
+      "significant": "False"
+    }
+  }
+}

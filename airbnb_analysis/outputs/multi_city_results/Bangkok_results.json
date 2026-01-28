@@ -1,0 +1,77 @@
+{
+  "city_name": "Bangkok",
+  "display_name": "Bangkok",
+  "sample_size": 23260,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 9.236319731958017e-244,
+      "significant": "True",
+      "premium_ratio": 1.3774104683195592,
+      "median_entire": 1500.0,
+      "median_private": 1089.0
+    },
+    "capacity_premium": {
+      "correlation": 0.48162190374086106,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": 254.36406102718334,
+      "interaction_p_value": 2.174438515506081e-05,
+      "significant": "True"
+    }
+  },
+  "scenario2": {},
+  "scenario3": {
+    "scale_price": {
+      "p_value": 6.732674761625287e-06,
+      "significant": "True",
+      "medians": {
+        "1": 1419.0,
+        "2-3": 1299.0,
+        "4-5": 1320.0,
+        ">5": 1399.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 8.229406571380692e-23,
+      "significant": "True",
+      "medians": {
+        "1": 296.0,
+        "2-3": 297.0,
+        "4-5": 308.0,
+        ">5": 330.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.05411633309358233,
+      "p_value": 1.468800030710968e-16,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 4.0509456331808174e-261,
+      "significant": "True",
+      "superhost_median": 271.0,
+      "regular_median": 347.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": -0.04948991977967525,
+      "p_value": 4.2848252873404985e-14,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": -0.0575257973923323,
+      "p_value": 1.6319756635726494e-18,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.3305636999492264,
+      "p_value": 0.0,
+      "significant": "True"
+    }
+  }
+}

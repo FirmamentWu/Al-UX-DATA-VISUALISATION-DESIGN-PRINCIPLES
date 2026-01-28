@@ -1,0 +1,77 @@
+{
+  "city_name": "Barwon South West, Vic",
+  "display_name": "Barwon South West, Vic",
+  "sample_size": 6309,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 1.5533400253050912e-134,
+      "significant": "True",
+      "premium_ratio": 2.27007299270073,
+      "median_entire": 311.0,
+      "median_private": 137.0
+    },
+    "capacity_premium": {
+      "correlation": 0.6132315245653835,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": -15.326946237122106,
+      "interaction_p_value": 0.03495245438700986,
+      "significant": "True"
+    }
+  },
+  "scenario2": {},
+  "scenario3": {
+    "scale_price": {
+      "p_value": 8.029736651986221e-88,
+      "significant": "True",
+      "medians": {
+        "1": 269.0,
+        "2-3": 229.0,
+        "4-5": 241.5,
+        ">5": 357.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 0.08785485851605024,
+      "significant": "False",
+      "medians": {
+        "1": 230.5,
+        "2-3": 218.0,
+        "4-5": 252.5,
+        ">5": 228.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.04978351054239985,
+      "p_value": 7.623605689766496e-05,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 9.387741660704163e-08,
+      "significant": "True",
+      "superhost_median": 223.0,
+      "regular_median": 239.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": -0.3997877011878031,
+      "p_value": 7.786745452157307e-241,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": -0.365380245657918,
+      "p_value": 1.5406061175217948e-198,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.09160773508442788,
+      "p_value": 3.09446455461026e-13,
+      "significant": "True"
+    }
+  }
+}

@@ -1,0 +1,879 @@
+{
+  "Albany": {
+    "city_name": "Albany",
+    "display_name": "Albany",
+    "sample_size": 437,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 8.222875563826427e-29,
+        "significant": "True",
+        "premium_ratio": 1.793103448275862,
+        "median_entire": 104.0,
+        "median_private": 58.0
+      },
+      "capacity_premium": {
+        "correlation": 0.7050480306001183,
+        "p_value": 1.4278005847441182e-65,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": 16.89811649303561,
+        "interaction_p_value": 0.10442199512545737,
+        "significant": "False"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 0.007492228855291941,
+        "significant": "True",
+        "medians": {
+          "1": 102.0,
+          "2-3": 85.0,
+          "4-5": 86.0,
+          ">5": 94.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 0.39397156555336754,
+        "significant": "False",
+        "medians": {
+          "1": 268.0,
+          "2-3": 305.0,
+          "4-5": 331.0,
+          ">5": 278.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.08798193087892706,
+        "p_value": 0.0661333025038748,
+        "significant": "False"
+      },
+      "superhost_comparison": {
+        "p_value": 0.001602887517906457,
+        "significant": "True",
+        "superhost_median": 269.0,
+        "regular_median": 321.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": 0.09648210091970542,
+        "p_value": 0.04381644040412818,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": 0.1498193456245953,
+        "p_value": 0.0016855674382025585,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.0643817660583179,
+        "p_value": 0.1791390026485863,
+        "significant": "False"
+      }
+    }
+  },
+  "Amsterdam": {
+    "city_name": "Amsterdam",
+    "display_name": "Amsterdam",
+    "sample_size": 5872,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 3.436008766728494e-253,
+        "significant": "True",
+        "premium_ratio": 1.7841726618705036,
+        "median_entire": 248.0,
+        "median_private": 139.0
+      },
+      "capacity_premium": {
+        "correlation": 0.5317907947857758,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": 29.024651355759143,
+        "interaction_p_value": 0.5338253722678475,
+        "significant": "False"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 1.90290306045672e-35,
+        "significant": "True",
+        "medians": {
+          "1": 227.0,
+          "2-3": 175.0,
+          "4-5": 195.5,
+          ">5": 209.5
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 2.5360923616721255e-35,
+        "significant": "True",
+        "medians": {
+          "1": 105.0,
+          "2-3": 210.0,
+          "4-5": 259.0,
+          ">5": 227.5
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.09894750305302968,
+        "p_value": 2.9776973060200376e-14,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 8.518957683649617e-09,
+        "significant": "True",
+        "superhost_median": 163.0,
+        "regular_median": 114.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.2287566951649857,
+        "p_value": 1.3998681998216357e-70,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.2124772858304626,
+        "p_value": 6.352646980889332e-61,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": 0.06426521881569122,
+        "p_value": 8.281053697157934e-07,
+        "significant": "True"
+      }
+    }
+  },
+  "Antwerp": {
+    "city_name": "Antwerp",
+    "display_name": "Antwerp",
+    "sample_size": 2148,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 2.0442497605333134e-35,
+        "significant": "True",
+        "premium_ratio": 1.5806451612903225,
+        "median_entire": 98.0,
+        "median_private": 62.0
+      },
+      "capacity_premium": {
+        "correlation": 0.32946351893114345,
+        "p_value": 1.0631047325009371e-53,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": 23.831764327356055,
+        "interaction_p_value": 0.8702555166824474,
+        "significant": "False"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 1.881476582507852e-05,
+        "significant": "True",
+        "medians": {
+          "1": 90.0,
+          "2-3": 94.0,
+          "4-5": 107.0,
+          ">5": 94.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 9.958933687592271e-09,
+        "significant": "True",
+        "medians": {
+          "1": 210.0,
+          "2-3": 252.0,
+          "4-5": 264.0,
+          ">5": 270.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.12103704546583073,
+        "p_value": 1.8328646159302824e-08,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 0.00013627931615289258,
+        "significant": "True",
+        "superhost_median": 240.0,
+        "regular_median": 261.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.13879950348622327,
+        "p_value": 1.044107494931497e-10,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.12565506228677648,
+        "p_value": 5.112789846843977e-09,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.07411646345944649,
+        "p_value": 0.0005865264927646829,
+        "significant": "True"
+      }
+    }
+  },
+  "Asheville": {
+    "city_name": "Asheville",
+    "display_name": "Asheville",
+    "sample_size": 2537,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 1.9955977628495617e-47,
+        "significant": "True",
+        "premium_ratio": 1.9577464788732395,
+        "median_entire": 139.0,
+        "median_private": 71.0
+      },
+      "capacity_premium": {
+        "correlation": 0.5859032415211394,
+        "p_value": 1.1381035354939277e-215,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": 6.371397565295309,
+        "interaction_p_value": 0.6810932101490255,
+        "significant": "False"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 2.4787583713909143e-28,
+        "significant": "True",
+        "medians": {
+          "1": 119.0,
+          "2-3": 126.0,
+          "4-5": 140.0,
+          ">5": 186.5
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 8.391167256442672e-31,
+        "significant": "True",
+        "medians": {
+          "1": 242.0,
+          "2-3": 288.0,
+          "4-5": 297.0,
+          ">5": 328.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.13776409035213003,
+        "p_value": 3.196067306639012e-12,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 0.8339513510369465,
+        "significant": "False",
+        "superhost_median": 291.0,
+        "regular_median": 267.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.11744922021523635,
+        "p_value": 2.9674720141665683e-09,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.2031452084270731,
+        "p_value": 4.891659831613739e-25,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.008901682881233972,
+        "p_value": 0.6540423580885801,
+        "significant": "False"
+      }
+    }
+  },
+  "Athens": {
+    "city_name": "Athens",
+    "display_name": "Athens",
+    "sample_size": 14515,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 1.8006101882890148e-22,
+        "significant": "True",
+        "premium_ratio": 1.3,
+        "median_entire": 78.0,
+        "median_private": 60.0
+      },
+      "capacity_premium": {
+        "correlation": 0.36476490832864705,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": -15.392380061577004,
+        "interaction_p_value": 0.004248262046577897,
+        "significant": "True"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 7.84288474420913e-135,
+        "significant": "True",
+        "medians": {
+          "1": 66.0,
+          "2-3": 72.0,
+          "4-5": 89.0,
+          ">5": 87.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 1.175340787707689e-12,
+        "significant": "True",
+        "medians": {
+          "1": 280.0,
+          "2-3": 302.0,
+          "4-5": 312.0,
+          ">5": 317.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.0320780651876091,
+        "p_value": 0.00011092099271310791,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 4.746136367642718e-09,
+        "significant": "True",
+        "superhost_median": 305.0,
+        "regular_median": 309.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.1677819806603155,
+        "p_value": 4.041922664683034e-92,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.14496866920636667,
+        "p_value": 5.269485750152559e-69,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.06839197450746969,
+        "p_value": 1.601371781517773e-16,
+        "significant": "True"
+      }
+    }
+  },
+  "Austin": {
+    "city_name": "Austin",
+    "display_name": "Austin",
+    "sample_size": 10517,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 0.0,
+        "significant": "True",
+        "premium_ratio": 2.5892857142857144,
+        "median_entire": 145.0,
+        "median_private": 56.0
+      },
+      "capacity_premium": {
+        "correlation": 0.6054407615962222,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": -1597.338240112027,
+        "interaction_p_value": 1.5032373429312293e-272,
+        "significant": "True"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 2.43501213344997e-18,
+        "significant": "True",
+        "medians": {
+          "1": 141.0,
+          "2-3": 124.0,
+          "4-5": 116.0,
+          ">5": 137.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 1.1936856732633438e-80,
+        "significant": "True",
+        "medians": {
+          "1": 239.0,
+          "2-3": 255.0,
+          "4-5": 250.0,
+          ">5": 318.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.10648761478291928,
+        "p_value": 6.614602041155141e-28,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 9.356231550894971e-09,
+        "significant": "True",
+        "superhost_median": 259.0,
+        "regular_median": 268.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.1193064206191052,
+        "p_value": 1.1951786737799928e-34,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.07693210574020921,
+        "p_value": 2.7812968625800495e-15,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.05483517687165863,
+        "p_value": 1.8332215453083374e-08,
+        "significant": "True"
+      }
+    }
+  },
+  "Bangkok": {
+    "city_name": "Bangkok",
+    "display_name": "Bangkok",
+    "sample_size": 23260,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 9.236319731958017e-244,
+        "significant": "True",
+        "premium_ratio": 1.3774104683195592,
+        "median_entire": 1500.0,
+        "median_private": 1089.0
+      },
+      "capacity_premium": {
+        "correlation": 0.48162190374086106,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": 254.36406102718334,
+        "interaction_p_value": 2.174438515506081e-05,
+        "significant": "True"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 6.732674761625287e-06,
+        "significant": "True",
+        "medians": {
+          "1": 1419.0,
+          "2-3": 1299.0,
+          "4-5": 1320.0,
+          ">5": 1399.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 8.229406571380692e-23,
+        "significant": "True",
+        "medians": {
+          "1": 296.0,
+          "2-3": 297.0,
+          "4-5": 308.0,
+          ">5": 330.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.05411633309358233,
+        "p_value": 1.468800030710968e-16,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 4.0509456331808174e-261,
+        "significant": "True",
+        "superhost_median": 271.0,
+        "regular_median": 347.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.04948991977967525,
+        "p_value": 4.2848252873404985e-14,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.0575257973923323,
+        "p_value": 1.6319756635726494e-18,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.3305636999492264,
+        "p_value": 0.0,
+        "significant": "True"
+      }
+    }
+  },
+  "Barcelona": {
+    "city_name": "Barcelona",
+    "display_name": "Barcelona",
+    "sample_size": 15269,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 0.0,
+        "significant": "True",
+        "premium_ratio": 2.7419354838709675,
+        "median_entire": 170.0,
+        "median_private": 62.0
+      },
+      "capacity_premium": {
+        "correlation": 0.6683265136712317,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": 24.919107755274823,
+        "interaction_p_value": 1.5809814505747374e-09,
+        "significant": "True"
+      }
+    },
+    "scenario2": {
+      "region_comparison": {
+        "p_value": 2.3700800884502996e-227,
+        "significant": "True",
+        "medians": {
+          "Ciutat Vella": 91.0,
+          "Eixample": 176.0,
+          "Gràcia": 140.0,
+          "Horta-Guinardó": 75.5,
+          "Les Corts": 149.0,
+          "Nou Barris": 64.5,
+          "Sant Andreu": 79.0,
+          "Sant Martí": 142.0,
+          "Sants-Montjuïc": 119.0,
+          "Sarrià-Sant Gervasi": 131.0
+        }
+      }
+    },
+    "scenario3": {
+      "scale_price": {
+        "p_value": 3.9351151889485033e-109,
+        "significant": "True",
+        "medians": {
+          "1": 100.0,
+          "2-3": 94.0,
+          "4-5": 158.0,
+          ">5": 148.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 7.174336363764911e-18,
+        "significant": "True",
+        "medians": {
+          "1": 239.0,
+          "2-3": 236.0,
+          "4-5": 257.0,
+          ">5": 263.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.06409988178496899,
+        "p_value": 2.223696250367802e-15,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 1.0035228190660062e-48,
+        "significant": "True",
+        "superhost_median": 226.0,
+        "regular_median": 265.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": 0.31638897064376365,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": 0.3295833669359363,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.14418986818037183,
+        "p_value": 9.9560079536313e-72,
+        "significant": "True"
+      }
+    }
+  },
+  "Barossa Valley": {
+    "city_name": "Barossa Valley",
+    "display_name": "Barossa Valley",
+    "sample_size": 317,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 0.00030184295862445117,
+        "significant": "True",
+        "premium_ratio": 1.553349875930521,
+        "median_entire": 313.0,
+        "median_private": 201.5
+      },
+      "capacity_premium": {
+        "correlation": 0.4650039485310537,
+        "p_value": 8.025510583456345e-18,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": 28.382198791469154,
+        "interaction_p_value": 0.4014753415224268,
+        "significant": "False"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 0.42306656281331145,
+        "significant": "False",
+        "medians": {
+          "1": 292.0,
+          "2-3": 298.0,
+          "4-5": 323.0,
+          ">5": 340.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 0.005190922305528007,
+        "significant": "True",
+        "medians": {
+          "1": 276.0,
+          "2-3": 305.0,
+          "4-5": 320.0,
+          ">5": 315.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.07510536114955337,
+        "p_value": 0.18226450209787362,
+        "significant": "False"
+      },
+      "superhost_comparison": {
+        "p_value": 0.0019118168321274015,
+        "significant": "True",
+        "superhost_median": 285.5,
+        "regular_median": 312.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.19321644421682255,
+        "p_value": 0.0005418154082229328,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.25747891083863356,
+        "p_value": 3.4054238600493115e-06,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.3049759177793635,
+        "p_value": 3.006617080810165e-08,
+        "significant": "True"
+      }
+    }
+  },
+  "Barwon South West, Vic": {
+    "city_name": "Barwon South West, Vic",
+    "display_name": "Barwon South West, Vic",
+    "sample_size": 6309,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 1.5533400253050912e-134,
+        "significant": "True",
+        "premium_ratio": 2.27007299270073,
+        "median_entire": 311.0,
+        "median_private": 137.0
+      },
+      "capacity_premium": {
+        "correlation": 0.6132315245653835,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": -15.326946237122106,
+        "interaction_p_value": 0.03495245438700986,
+        "significant": "True"
+      }
+    },
+    "scenario2": {},
+    "scenario3": {
+      "scale_price": {
+        "p_value": 8.029736651986221e-88,
+        "significant": "True",
+        "medians": {
+          "1": 269.0,
+          "2-3": 229.0,
+          "4-5": 241.5,
+          ">5": 357.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 0.08785485851605024,
+        "significant": "False",
+        "medians": {
+          "1": 230.5,
+          "2-3": 218.0,
+          "4-5": 252.5,
+          ">5": 228.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.04978351054239985,
+        "p_value": 7.623605689766496e-05,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 9.387741660704163e-08,
+        "significant": "True",
+        "superhost_median": 223.0,
+        "regular_median": 239.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.3997877011878031,
+        "p_value": 7.786745452157307e-241,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.365380245657918,
+        "p_value": 1.5406061175217948e-198,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.09160773508442788,
+        "p_value": 3.09446455461026e-13,
+        "significant": "True"
+      }
+    }
+  },
+  "Belize": {
+    "city_name": "Belize",
+    "display_name": "Belize",
+    "sample_size": 3106,
+    "scenario1": {
+      "privacy_premium": {
+        "p_value": 5.451416306016131e-17,
+        "significant": "True",
+        "premium_ratio": 1.364864864864865,
+        "median_entire": 303.0,
+        "median_private": 222.0
+      },
+      "capacity_premium": {
+        "correlation": 0.5208054338321837,
+        "p_value": 1.5193048249802427e-206,
+        "significant": "True"
+      },
+      "interaction_effect": {
+        "interaction_coef": -738.8956258307409,
+        "interaction_p_value": 1.646759312500805e-07,
+        "significant": "True"
+      }
+    },
+    "scenario2": {
+      "region_comparison": {
+        "p_value": 1.2207470332701475e-53,
+        "significant": "True",
+        "medians": {
+          "Belize": 306.0,
+          "Cayo": 170.0,
+          "Corozal": 191.0,
+          "Orange Walk": 131.0,
+          "Stann Creek": 332.0,
+          "Toledo": 146.0
+        }
+      }
+    },
+    "scenario3": {
+      "scale_price": {
+        "p_value": 1.684674231087606e-29,
+        "significant": "True",
+        "medians": {
+          "1": 289.0,
+          "2-3": 200.0,
+          "4-5": 258.0,
+          ">5": 330.0
+        }
+      },
+      "scale_occupancy": {
+        "p_value": 0.8325417029831764,
+        "significant": "False",
+        "medians": {
+          "1": 307.0,
+          "2-3": 315.0,
+          "4-5": 307.0,
+          ">5": 312.0
+        }
+      }
+    },
+    "scenario4": {
+      "rating_occupancy": {
+        "correlation": -0.17661878846311405,
+        "p_value": 3.500063496346258e-23,
+        "significant": "True"
+      },
+      "superhost_comparison": {
+        "p_value": 1.0297355522141939e-38,
+        "significant": "True",
+        "superhost_median": 293.5,
+        "regular_median": 337.0
+      }
+    },
+    "scenario5": {
+      "ltm_price": {
+        "correlation": -0.21304957422386084,
+        "p_value": 3.268930802510771e-33,
+        "significant": "True"
+      },
+      "historical_price": {
+        "correlation": -0.27914071330995116,
+        "p_value": 1.070755635822379e-56,
+        "significant": "True"
+      },
+      "ltm_occupancy": {
+        "correlation": -0.1170535664249806,
+        "p_value": 6.011577772669522e-11,
+        "significant": "True"
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "city_name": "Antwerp",
+  "display_name": "Antwerp",
+  "sample_size": 2148,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 2.0442497605333134e-35,
+      "significant": "True",
+      "premium_ratio": 1.5806451612903225,
+      "median_entire": 98.0,
+      "median_private": 62.0
+    },
+    "capacity_premium": {
+      "correlation": 0.32946351893114345,
+      "p_value": 1.0631047325009371e-53,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": 23.831764327356055,
+      "interaction_p_value": 0.8702555166824474,
+      "significant": "False"
+    }
+  },
+  "scenario2": {},
+  "scenario3": {
+    "scale_price": {
+      "p_value": 1.881476582507852e-05,
+      "significant": "True",
+      "medians": {
+        "1": 90.0,
+        "2-3": 94.0,
+        "4-5": 107.0,
+        ">5": 94.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 9.958933687592271e-09,
+      "significant": "True",
+      "medians": {
+        "1": 210.0,
+        "2-3": 252.0,
+        "4-5": 264.0,
+        ">5": 270.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.12103704546583073,
+      "p_value": 1.8328646159302824e-08,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 0.00013627931615289258,
+      "significant": "True",
+      "superhost_median": 240.0,
+      "regular_median": 261.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": -0.13879950348622327,
+      "p_value": 1.044107494931497e-10,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": -0.12565506228677648,
+      "p_value": 5.112789846843977e-09,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.07411646345944649,
+      "p_value": 0.0005865264927646829,
+      "significant": "True"
+    }
+  }
+}

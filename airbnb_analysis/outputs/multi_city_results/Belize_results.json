@@ -1,0 +1,90 @@
+{
+  "city_name": "Belize",
+  "display_name": "Belize",
+  "sample_size": 3106,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 5.451416306016131e-17,
+      "significant": "True",
+      "premium_ratio": 1.364864864864865,
+      "median_entire": 303.0,
+      "median_private": 222.0
+    },
+    "capacity_premium": {
+      "correlation": 0.5208054338321837,
+      "p_value": 1.5193048249802427e-206,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": -738.8956258307409,
+      "interaction_p_value": 1.646759312500805e-07,
+      "significant": "True"
+    }
+  },
+  "scenario2": {
+    "region_comparison": {
+      "p_value": 1.2207470332701475e-53,
+      "significant": "True",
+      "medians": {
+        "Belize": 306.0,
+        "Cayo": 170.0,
+        "Corozal": 191.0,
+        "Orange Walk": 131.0,
+        "Stann Creek": 332.0,
+        "Toledo": 146.0
+      }
+    }
+  },
+  "scenario3": {
+    "scale_price": {
+      "p_value": 1.684674231087606e-29,
+      "significant": "True",
+      "medians": {
+        "1": 289.0,
+        "2-3": 200.0,
+        "4-5": 258.0,
+        ">5": 330.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 0.8325417029831764,
+      "significant": "False",
+      "medians": {
+        "1": 307.0,
+        "2-3": 315.0,
+        "4-5": 307.0,
+        ">5": 312.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.17661878846311405,
+      "p_value": 3.500063496346258e-23,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 1.0297355522141939e-38,
+      "significant": "True",
+      "superhost_median": 293.5,
+      "regular_median": 337.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": -0.21304957422386084,
+      "p_value": 3.268930802510771e-33,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": -0.27914071330995116,
+      "p_value": 1.070755635822379e-56,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.1170535664249806,
+      "p_value": 6.011577772669522e-11,
+      "significant": "True"
+    }
+  }
+}

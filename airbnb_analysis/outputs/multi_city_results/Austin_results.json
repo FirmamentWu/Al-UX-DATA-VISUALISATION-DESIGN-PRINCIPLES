@@ -1,0 +1,77 @@
+{
+  "city_name": "Austin",
+  "display_name": "Austin",
+  "sample_size": 10517,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 0.0,
+      "significant": "True",
+      "premium_ratio": 2.5892857142857144,
+      "median_entire": 145.0,
+      "median_private": 56.0
+    },
+    "capacity_premium": {
+      "correlation": 0.6054407615962222,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": -1597.338240112027,
+      "interaction_p_value": 1.5032373429312293e-272,
+      "significant": "True"
+    }
+  },
+  "scenario2": {},
+  "scenario3": {
+    "scale_price": {
+      "p_value": 2.43501213344997e-18,
+      "significant": "True",
+      "medians": {
+        "1": 141.0,
+        "2-3": 124.0,
+        "4-5": 116.0,
+        ">5": 137.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 1.1936856732633438e-80,
+      "significant": "True",
+      "medians": {
+        "1": 239.0,
+        "2-3": 255.0,
+        "4-5": 250.0,
+        ">5": 318.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.10648761478291928,
+      "p_value": 6.614602041155141e-28,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 9.356231550894971e-09,
+      "significant": "True",
+      "superhost_median": 259.0,
+      "regular_median": 268.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": -0.1193064206191052,
+      "p_value": 1.1951786737799928e-34,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": -0.07693210574020921,
+      "p_value": 2.7812968625800495e-15,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.05483517687165863,
+      "p_value": 1.8332215453083374e-08,
+      "significant": "True"
+    }
+  }
+}

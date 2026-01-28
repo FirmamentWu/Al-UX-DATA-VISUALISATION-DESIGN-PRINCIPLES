@@ -1,0 +1,11 @@
+{
+  "city_name": "san_francisco",
+  "display_name": "San Francisco",
+  "sample_size": 0,
+  "scenario1": {},
+  "scenario2": {},
+  "scenario3": {},
+  "scenario4": {},
+  "scenario5": {},
+  "error": "样本量不足: 0"
+}

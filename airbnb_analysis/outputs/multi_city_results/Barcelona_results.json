@@ -1,0 +1,94 @@
+{
+  "city_name": "Barcelona",
+  "display_name": "Barcelona",
+  "sample_size": 15269,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 0.0,
+      "significant": "True",
+      "premium_ratio": 2.7419354838709675,
+      "median_entire": 170.0,
+      "median_private": 62.0
+    },
+    "capacity_premium": {
+      "correlation": 0.6683265136712317,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": 24.919107755274823,
+      "interaction_p_value": 1.5809814505747374e-09,
+      "significant": "True"
+    }
+  },
+  "scenario2": {
+    "region_comparison": {
+      "p_value": 2.3700800884502996e-227,
+      "significant": "True",
+      "medians": {
+        "Ciutat Vella": 91.0,
+        "Eixample": 176.0,
+        "Gràcia": 140.0,
+        "Horta-Guinardó": 75.5,
+        "Les Corts": 149.0,
+        "Nou Barris": 64.5,
+        "Sant Andreu": 79.0,
+        "Sant Martí": 142.0,
+        "Sants-Montjuïc": 119.0,
+        "Sarrià-Sant Gervasi": 131.0
+      }
+    }
+  },
+  "scenario3": {
+    "scale_price": {
+      "p_value": 3.9351151889485033e-109,
+      "significant": "True",
+      "medians": {
+        "1": 100.0,
+        "2-3": 94.0,
+        "4-5": 158.0,
+        ">5": 148.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 7.174336363764911e-18,
+      "significant": "True",
+      "medians": {
+        "1": 239.0,
+        "2-3": 236.0,
+        "4-5": 257.0,
+        ">5": 263.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.06409988178496899,
+      "p_value": 2.223696250367802e-15,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 1.0035228190660062e-48,
+      "significant": "True",
+      "superhost_median": 226.0,
+      "regular_median": 265.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": 0.31638897064376365,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": 0.3295833669359363,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.14418986818037183,
+      "p_value": 9.9560079536313e-72,
+      "significant": "True"
+    }
+  }
+}

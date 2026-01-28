@@ -1,0 +1,77 @@
+{
+  "city_name": "Athens",
+  "display_name": "Athens",
+  "sample_size": 14515,
+  "scenario1": {
+    "privacy_premium": {
+      "p_value": 1.8006101882890148e-22,
+      "significant": "True",
+      "premium_ratio": 1.3,
+      "median_entire": 78.0,
+      "median_private": 60.0
+    },
+    "capacity_premium": {
+      "correlation": 0.36476490832864705,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "interaction_effect": {
+      "interaction_coef": -15.392380061577004,
+      "interaction_p_value": 0.004248262046577897,
+      "significant": "True"
+    }
+  },
+  "scenario2": {},
+  "scenario3": {
+    "scale_price": {
+      "p_value": 7.84288474420913e-135,
+      "significant": "True",
+      "medians": {
+        "1": 66.0,
+        "2-3": 72.0,
+        "4-5": 89.0,
+        ">5": 87.0
+      }
+    },
+    "scale_occupancy": {
+      "p_value": 1.175340787707689e-12,
+      "significant": "True",
+      "medians": {
+        "1": 280.0,
+        "2-3": 302.0,
+        "4-5": 312.0,
+        ">5": 317.0
+      }
+    }
+  },
+  "scenario4": {
+    "rating_occupancy": {
+      "correlation": -0.0320780651876091,
+      "p_value": 0.00011092099271310791,
+      "significant": "True"
+    },
+    "superhost_comparison": {
+      "p_value": 4.746136367642718e-09,
+      "significant": "True",
+      "superhost_median": 305.0,
+      "regular_median": 309.0
+    }
+  },
+  "scenario5": {
+    "ltm_price": {
+      "correlation": -0.1677819806603155,
+      "p_value": 4.041922664683034e-92,
+      "significant": "True"
+    },
+    "historical_price": {
+      "correlation": -0.14496866920636667,
+      "p_value": 5.269485750152559e-69,
+      "significant": "True"
+    },
+    "ltm_occupancy": {
+      "correlation": -0.06839197450746969,
+      "p_value": 1.601371781517773e-16,
+      "significant": "True"
+    }
+  }
+}
