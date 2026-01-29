@@ -1,74 +1,166 @@
-# Airbnb 价格分析项目
+# Airbnb Price Analysis Project
 
-## 项目结构
+A comprehensive analysis of Airbnb listing prices, identifying key factors that influence pricing across multiple cities.
+
+## Project Overview
+
+This project analyzes Airbnb listing data to identify patterns in pricing behavior. The analysis is conducted in two phases:
+
+1. **NYC Analysis**: Deep dive into New York City data to identify 5 core pricing patterns
+2. **Multi-City Validation**: Validate these patterns across 11 international cities to assess generalizability
+
+## Project Structure
 
 ```
 airbnb_analysis/
-├── config/              # 配置模块
-│   ├── settings.py      # 配置参数
-│   └── constants.py     # 常量定义
-├── data/                # 数据处理
-│   ├── loader.py        # 数据加载
-│   ├── preprocessor.py  # 数据预处理
-│   └── raw/             # 原始数据
-│       └── listings_2_cleaned 4.0.csv
-├── models/              # 模型模块
-│   ├── statistical_tests.py  # 统计检验
-│   ├── regression.py    # 回归模型
-│   └── smoothing.py     # 非参数平滑
-├── visualization/       # 可视化
-│   └── style.py         # 图表样式
-├── analysis/            # 分析场景
-│   ├── scenario1_physical_space.py    # 场景1: 物理空间溢价
-│   ├── scenario2_location.py         # 场景2: 黄金地段
-│   ├── scenario3_scale.py            # 场景3: 规模溢价
-│   ├── scenario4_trust.py            # 场景4: 信任货币化
-│   ├── scenario5_activity.py         # 场景5: 活跃度信号
-│   └── comprehensive_model.py        # 综合模型
-├── utils/               # 工具函数
-│   └── dependencies.py  # 依赖管理
+├── config/              # Configuration module
+│   ├── settings.py      # Configuration parameters
+│   └── constants.py     # Constant definitions
+├── data/                # Data processing
+│   ├── loader.py        # Data loading (NYC)
+│   ├── preprocessor.py  # Data preprocessing (NYC)
+│   ├── cleaner.py       # Data cleaning (based on notebook)
+│   ├── adapter.py       # Column name standardization
+│   ├── multi_city_loader.py  # Multi-city data loading
+│   └── raw/             # Raw data files
+├── models/              # Model module
+│   ├── statistical_tests.py  # Statistical tests
+│   ├── regression.py    # Regression models
+│   └── smoothing.py     # Non-parametric smoothing
+├── visualization/       # Visualization
+│   └── style.py         # Plot styling
+├── analysis/            # Analysis scenarios
+│   ├── scenario1_physical_space.py    # Scenario 1: Physical space premium
+│   ├── scenario2_location.py         # Scenario 2: Location premium
+│   ├── scenario3_scale.py            # Scenario 3: Scale premium
+│   ├── scenario4_trust.py            # Scenario 4: Trust monetization
+│   ├── scenario5_activity.py         # Scenario 5: Activity signals
+│   ├── comprehensive_model.py         # Comprehensive model
+│   ├── multi_city_analysis.py        # Multi-city analysis framework
+│   ├── cross_city_comparison.py      # Cross-city comparison
+│   └── generalizability_visualization.py  # Generalizability visualization
+├── utils/               # Utility functions
+│   ├── dependencies.py  # Dependency management
+│   └── validate_results.py  # Result validation
 ├── notebooks/           # Jupyter Notebooks
 │   └── Data Cleaning and Feature Engineering.ipynb
-├── docs/                # 文档
-│   └── 分析结果总结.md
-├── outputs/             # 输出目录
-│   └── figures/         # 生成的图表
-├── README.md            # 项目说明
-└── requirements.txt     # 依赖列表
+├── docs/                # Documentation
+│   ├── comprehensive_analysis_report.md  # Comprehensive report
+│   ├── multi_city_validation_report.md
+│   ├── 分析结果总结.md
+│   └── 跨城市分析结果报告.md
+├── outputs/            # Output directory
+│   ├── figures/         # Generated charts (22 PNG files)
+│   ├── multi_city_results/  # Multi-city analysis results
+│   └── validation/      # Validation results
+├── README.md            # Project documentation
+└── requirements.txt     # Dependencies
 
-../main.py               # 主入口文件（在项目根目录）
+../main.py               # NYC analysis entry point
+../multi_city_main.py    # Multi-city analysis entry point
 ```
 
-## 使用方法
+## Installation
 
-1. 安装依赖：
+1. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. 运行分析：
+## Usage
+
+### Run NYC Analysis
 ```bash
 python main.py
 ```
 
-3. 查看结果：
-所有图表将保存在 `airbnb_analysis/outputs/figures/` 目录下。
+This will:
+- Load and preprocess NYC data
+- Run 5 scenario analyses
+- Generate comprehensive price model
+- Save 19 charts to `airbnb_analysis/outputs/figures/`
 
-## 项目文件说明
+### Run Multi-City Analysis
+```bash
+python multi_city_main.py
+```
 
-- **数据文件**: `data/raw/listings_2_cleaned 4.0.csv` - 清洗后的数据
-- **数据清洗**: `notebooks/Data Cleaning and Feature Engineering.ipynb` - 数据清洗和特征工程
-- **分析结果**: `docs/分析结果总结.md` - 详细的分析结果总结
+This will:
+- Load data from 11 cities
+- Run the same 5 scenario analyses for each city
+- Compare results across cities
+- Generate generalizability visualizations
+- Save results to `airbnb_analysis/outputs/multi_city_results/`
 
-## 生成的图表
+## Analysis Scenarios
 
-项目会生成19张图表，涵盖5个核心分析场景：
+### Scenario 1: Physical Space Premium
+- Privacy premium: Entire home vs Private room
+- Capacity premium: Price increase per additional person
+- Interaction effects: Room type × capacity
 
-- **场景1**: 物理空间的溢价逻辑 (3张图)
-- **场景2**: 黄金地段的绝对统治 (4张图)
-- **场景3**: 运营专业化带来的规模溢价 (4张图)
-- **场景4**: 信任的货币化 (3张图)
-- **场景5**: 活跃度即需求的实时信号 (4张图)
-- **综合模型**: 价格预测模型 (1张图)
+### Scenario 2: Location Premium
+- Spatial price heatmap
+- Regional price comparison
+- Sub-regional price jumps
+- Controlled location premium
 
+### Scenario 3: Scale Premium
+- Host scale vs price
+- Host scale vs occupancy
+- Entire home specialization
 
+### Scenario 4: Trust Monetization
+- Rating distribution and threshold effects
+- Rating vs occupancy
+- Superhost comparison
+
+### Scenario 5: Activity Signals
+- Historical vs LTM reviews decoupling
+- LTM reviews vs price
+- Historical reviews vs price
+- LTM reviews vs occupancy
+
+## Generated Charts
+
+### NYC Analysis Charts (19 charts)
+- **Scenario 1**: 3 charts (privacy premium, capacity premium, interaction effect)
+- **Scenario 2**: 4 charts (spatial heatmap, region comparison, subregions, controlled premium)
+- **Scenario 3**: 4 charts (scale vs price, scale vs occupancy, entire home scale, specialization)
+- **Scenario 4**: 3 charts (rating distribution, rating vs occupancy, superhost)
+- **Scenario 5**: 4 charts (reviews decoupling, LTM vs price, historical vs price, LTM vs occupancy)
+- **Comprehensive Model**: 1 chart (price prediction model)
+
+### Multi-City Validation Charts (3 charts)
+- `generalizability_validation.png`: Main generalizability chart showing validation status for each pattern
+- `validation_method_matrix.png`: Statistical significance matrix across all cities
+- `effect_consistency.png`: Effect size consistency across cities
+
+## Key Findings
+
+1. **Physical space premium is universal**: Capacity and privacy premiums are significant across all 11 validation cities
+2. **Location premium exists but data-limited**: Core area premiums are significant in validated cities, but some cities lack regional data
+3. **Scale premium is universal in price dimension**: Multi-listing host price premiums are significant in 90.9% of cities
+4. **Trust can be monetized**: Ratings and superhost status translate to price premiums universally
+5. **Activity is a real-time demand signal**: LTM review counts as demand signals show significant relationships with price and occupancy across all cities
+
+## Documentation
+
+- **Comprehensive Report**: `docs/comprehensive_analysis_report.md` - Complete analysis report integrating NYC and multi-city results
+- **Project Structure**: `PROJECT_STRUCTURE.md` - Detailed project structure documentation
+
+## Data Sources
+
+- **NYC Data**: Inside Airbnb (cleaned version)
+- **Multi-City Data**: Inside Airbnb (11 cities: Albany, Amsterdam, Antwerp, Asheville, Athens, Austin, Bangkok, Barcelona, Barossa Valley, Barwon South West Vic, Belize)
+
+## Statistical Methods
+
+- **Non-parametric tests**: Mann-Whitney U, Kruskal-Wallis (robust to non-normal distributions)
+- **Correlation analysis**: Spearman rank correlation (monotonic relationships)
+- **Regression models**: Linear, interaction effects, log-linear
+- **Non-parametric smoothing**: LOWESS, KDE
+
+## License
+
+This project is for research and educational purposes.
