@@ -11,6 +11,13 @@ This project conducts a two-phase analysis:
 
 **Research Question**: Are the pricing patterns found in NYC data generalizable to other cities worldwide?
 
+## Team / 团队
+
+- **Team Name / 团队名称**: 6002组队
+- **Main Contributor / 主要完成人**: 武翔宇 (WU XIANGYU)
+- **Early Research & Product Design / 项目初期调研与产品设计**: 吴丽芳 (WU LIFANG)
+- **Other Contributors / 其他贡献者**: 吴磊 (WU LEI), 吴欣阔 (WU XINKUO)
+
 ## Key Findings
 
 ### Universal Patterns (100% cities significant)
