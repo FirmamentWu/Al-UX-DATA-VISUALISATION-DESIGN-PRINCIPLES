@@ -18,40 +18,87 @@ from airbnb_analysis.config.constants import FEATURE_COLS
 
 def analyze_privacy_premium(df):
     """1.1 隐私溢价分析"""
+    # Make the privacy premium story visually readable:
+    # - Focus on Entire home/apt vs Private room only (privacy comparison)
+    # - Handle heavy long-tail prices by (a) hiding fliers + y-limit, and (b) log-price violin
     fig, axes = plt.subplots(1, 2, figsize=(16, 6))
-    
-    room_types = df[FEATURE_COLS['room_type']].dropna().unique()
-    room_types_clean = [rt for rt in room_types if pd.notna(rt)]
-    df_room = df[df[FEATURE_COLS['room_type']].isin(room_types_clean)]
-    
-    # Boxplot
-    sns.boxplot(
-        data=df_room, 
-        x=FEATURE_COLS['room_type'], 
-        y=FEATURE_COLS['price'], 
-        ax=axes[0], 
-        palette='Set2'
+
+    privacy_types = ['Entire home/apt', 'Private room']
+    df_room = df[
+        df[FEATURE_COLS['room_type']].isin(privacy_types) & df[FEATURE_COLS['price']].notna()
+    ].copy()
+
+    # Keep consistent category order
+    df_room[FEATURE_COLS['room_type']] = pd.Categorical(
+        df_room[FEATURE_COLS['room_type']], categories=privacy_types, ordered=True
     )
-    axes[0].set_title('Privacy Premium: Entire Home vs Private Room', 
-                     fontsize=14, fontweight='bold')
+
+    # Robust y-limit for raw price (avoid a few extreme listings flattening the plot)
+    y_upper = df_room[FEATURE_COLS['price']].quantile(0.99)
+
+    # Left: Boxplot on raw price (clean, focus on median/shift)
+    sns.boxplot(
+        data=df_room,
+        x=FEATURE_COLS['room_type'],
+        y=FEATURE_COLS['price'],
+        ax=axes[0],
+        palette=['#4C72B0', '#DD8452'],
+        showfliers=False,
+        width=0.5
+    )
+    # Light jitter points (optional but helps show density without overwhelming)
+    sns.stripplot(
+        data=df_room.sample(n=min(len(df_room), 3000), random_state=42),
+        x=FEATURE_COLS['room_type'],
+        y=FEATURE_COLS['price'],
+        ax=axes[0],
+        color='black',
+        alpha=0.08,
+        size=2,
+        jitter=0.25
+    )
+    axes[0].set_ylim(0, y_upper)
+    axes[0].set_title('Privacy Premium: Entire Home vs Private Room\n(Raw Price, 99th pct. capped; fliers hidden)',
+                      fontsize=13, fontweight='bold')
     axes[0].set_xlabel('Room Type', fontsize=12)
     axes[0].set_ylabel('Price ($)', fontsize=12)
-    axes[0].tick_params(axis='x', rotation=45)
-    
-    # Violin plot
+    axes[0].grid(True, alpha=0.25)
+
+    # Annotate medians + premium ratio (high-signal for EDA/storytelling)
+    med_entire = df_room[df_room[FEATURE_COLS['room_type']] == 'Entire home/apt'][FEATURE_COLS['price']].median()
+    med_private = df_room[df_room[FEATURE_COLS['room_type']] == 'Private room'][FEATURE_COLS['price']].median()
+    premium_ratio = (med_entire / med_private) if (pd.notna(med_entire) and pd.notna(med_private) and med_private > 0) else np.nan
+    for i, (label, median_val) in enumerate([('Entire home/apt', med_entire), ('Private room', med_private)]):
+        axes[0].text(
+            i, min(median_val + 0.04 * y_upper, 0.98 * y_upper),
+            f"Median: ${median_val:,.0f}",
+            ha='center', va='bottom', fontsize=10, fontweight='bold'
+        )
+    if pd.notna(premium_ratio):
+        axes[0].text(
+            0.5, 0.92 * y_upper,
+            f"Median premium ≈ {premium_ratio:.2f}×",
+            ha='center', va='center',
+            fontsize=11, fontweight='bold',
+            bbox=dict(boxstyle='round,pad=0.35', facecolor='white', alpha=0.85, edgecolor='#999999')
+        )
+
+    # Right: Violin on log-price (best view of distribution shift under long tails)
+    df_room['log_price_plot'] = np.log1p(df_room[FEATURE_COLS['price']])
     sns.violinplot(
-        data=df_room, 
-        x=FEATURE_COLS['room_type'], 
-        y=FEATURE_COLS['price'], 
-        ax=axes[1], 
-        palette='Set2', 
-        inner='quartile'
+        data=df_room,
+        x=FEATURE_COLS['room_type'],
+        y='log_price_plot',
+        ax=axes[1],
+        palette=['#4C72B0', '#DD8452'],
+        inner='quartile',
+        cut=0
     )
-    axes[1].set_title('Price Distribution by Room Type', 
-                     fontsize=14, fontweight='bold')
+    axes[1].set_title('Privacy Premium (Log Scale)\n(Log1p Price highlights distribution shift)',
+                      fontsize=13, fontweight='bold')
     axes[1].set_xlabel('Room Type', fontsize=12)
-    axes[1].set_ylabel('Price ($)', fontsize=12)
-    axes[1].tick_params(axis='x', rotation=45)
+    axes[1].set_ylabel('Log(Price + 1)', fontsize=12)
+    axes[1].grid(True, alpha=0.25)
     
     plt.tight_layout()
     save_figure(fig, '1_1_privacy_premium.png', OUTPUT_DIR)

@@ -41,9 +41,17 @@ def run_scenario5(df):
     max_val = max(df_reviews[FEATURE_COLS['reviews_total']].max(), df_reviews[FEATURE_COLS['reviews_ltm']].max())
     ax.plot([0, max_val], [0, max_val], 'r--', linewidth=2, label='Perfect Correlation', alpha=0.5)
 
-# 标注异常区域（历史高但LTM低）
-    high_hist_low_ltm = df_reviews[(df_reviews[FEATURE_COLS['reviews_total']] > df_reviews[FEATURE_COLS['reviews_total']].quantile(0.75)) & 
-                                (df_reviews[FEATURE_COLS['reviews_ltm']] < df_reviews[FEATURE_COLS['reviews_ltm']].quantile(0.25))]
+    # 标注异常区域（历史高但LTM低）
+    # 注意：在NYC数据里 LTM 的 25% 分位数常常为 0，
+    # 如果使用 "< q25" 会导致永远选不到点（因为 LTM 不会 < 0）。
+    q75_hist = df_reviews[FEATURE_COLS['reviews_total']].quantile(0.75)
+    q25_ltm = df_reviews[FEATURE_COLS['reviews_ltm']].quantile(0.25)
+    if q25_ltm <= 0:
+        low_ltm_mask = df_reviews[FEATURE_COLS['reviews_ltm']] == 0
+    else:
+        low_ltm_mask = df_reviews[FEATURE_COLS['reviews_ltm']] <= q25_ltm
+
+    high_hist_low_ltm = df_reviews[(df_reviews[FEATURE_COLS['reviews_total']] > q75_hist) & low_ltm_mask]
     if len(high_hist_low_ltm) > 0:
         ax.scatter(high_hist_low_ltm[FEATURE_COLS['reviews_total']], high_hist_low_ltm[FEATURE_COLS['reviews_ltm']], 
                   alpha=0.6, s=30, color='red', label='High History, Low LTM')
@@ -66,7 +74,7 @@ def run_scenario5(df):
 # 5.2 近一年评论 vs 价格
     fig, ax = plt.subplots(figsize=(12, 8))
 
-    df_ltm_price = df[df[FEATURE_COLS['reviews_ltm']].notna() & df[FEATURE_COLS[FEATURE_COLS['price']]].notna()].copy()
+    df_ltm_price = df[df[FEATURE_COLS['reviews_ltm']].notna() & df[FEATURE_COLS['price']].notna()].copy()
     df_ltm_price = df_ltm_price[df_ltm_price[FEATURE_COLS['reviews_ltm']] <= df_ltm_price[FEATURE_COLS['reviews_ltm']].quantile(0.95)]
     df_ltm_price = df_ltm_price[df_ltm_price[FEATURE_COLS['price']].between(df_ltm_price[FEATURE_COLS['price']].quantile(0.01), 
                                                            df_ltm_price[FEATURE_COLS['price']].quantile(0.99))]
@@ -78,7 +86,8 @@ def run_scenario5(df):
     sorted_idx = np.argsort(df_ltm_price[FEATURE_COLS['reviews_ltm']].values)
     x_sorted = df_ltm_price[FEATURE_COLS['reviews_ltm']].values[sorted_idx]
     y_sorted = df_ltm_price[FEATURE_COLS['price']].values[sorted_idx]
-    x_lowess, y_lowess = fit_lowess(y_sorted, x_sorted, frac=ANALYSIS_CONFIG["lowess_frac"])
+    # NOTE: fit_lowess(x, y) returns smoothed y as a function of x
+    x_lowess, y_lowess = fit_lowess(x_sorted, y_sorted, frac=ANALYSIS_CONFIG["lowess_frac"])
     ax.plot(x_lowess, y_lowess, 'r-', linewidth=3, label='LOWESS')
 
 # Log transformation regression
@@ -121,7 +130,8 @@ def run_scenario5(df):
     sorted_idx = np.argsort(df_hist_price[FEATURE_COLS['reviews_total']].values)
     x_sorted = df_hist_price[FEATURE_COLS['reviews_total']].values[sorted_idx]
     y_sorted = df_hist_price[FEATURE_COLS['price']].values[sorted_idx]
-    x_lowess, y_lowess = fit_lowess(y_sorted, x_sorted, frac=ANALYSIS_CONFIG["lowess_frac"])
+    # NOTE: fit_lowess(x, y) returns smoothed y as a function of x
+    x_lowess, y_lowess = fit_lowess(x_sorted, y_sorted, frac=ANALYSIS_CONFIG["lowess_frac"])
     ax.plot(x_lowess, y_lowess, 'r-', linewidth=3, label='LOWESS')
 
     ax.set_xlabel('Total Reviews (Historical)', fontsize=12)
@@ -154,7 +164,8 @@ def run_scenario5(df):
     sorted_idx = np.argsort(df_ltm_occ[FEATURE_COLS['reviews_ltm']].values)
     x_sorted = df_ltm_occ[FEATURE_COLS['reviews_ltm']].values[sorted_idx]
     y_sorted = df_ltm_occ[FEATURE_COLS['availability']].values[sorted_idx]
-    x_lowess, y_lowess = fit_lowess(y_sorted, x_sorted, frac=ANALYSIS_CONFIG["lowess_frac"])
+    # NOTE: fit_lowess(x, y) returns smoothed y as a function of x
+    x_lowess, y_lowess = fit_lowess(x_sorted, y_sorted, frac=ANALYSIS_CONFIG["lowess_frac"])
     ax.plot(x_lowess, y_lowess, 'r-', linewidth=3, label='LOWESS')
 
 # Linear regression
